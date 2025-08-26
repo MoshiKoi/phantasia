@@ -1,0 +1,6 @@
+fn greet(name)
+    let message = "Hello, " + name + "!"
+    print(message)
+end
+
+greet("World")

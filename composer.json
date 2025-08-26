@@ -1,0 +1,20 @@
+{
+    "name": "moshikoi/phantasia",
+    "type": "project",
+    "require": {
+        "symfony/string": "^7.3",
+        "symfony/console": "^7.3",
+        "symfony/filesystem": "^7.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Phantasia\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "MoshiKoi",
+            "email": "54333972+MoshiKoi@users.noreply.github.com"
+        }
+    ]
+}
