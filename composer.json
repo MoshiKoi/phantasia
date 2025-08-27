@@ -16,5 +16,8 @@
             "name": "MoshiKoi",
             "email": "54333972+MoshiKoi@users.noreply.github.com"
         }
-    ]
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^12.3"
+    }
 }
