@@ -76,6 +76,12 @@ final class Tokenizer implements Iterator
             return;
         }
 
+        if ($this->char() === mb_ord('#')) {
+            $this->skipComment();
+            $this->next();
+            return;
+        }
+
         match ($this->char()) {
             mb_ord('(') => $this->nextSymbol(TokenType::LParen),
             mb_ord(')') => $this->nextSymbol(TokenType::RParen),
@@ -118,6 +124,13 @@ final class Tokenizer implements Iterator
     private function skipWhitespace()
     {
         while (IntlChar::isUWhiteSpace($this->char())) {
+            $this->nextChar();
+        }
+    }
+
+    private function skipComment()
+    {
+        while ($this->char() !== mb_ord("\n") && $this->char() !== IntlCodePointBreakIterator::DONE) {
             $this->nextChar();
         }
     }
