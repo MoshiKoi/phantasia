@@ -1,6 +1,8 @@
 {
     "name": "moshikoi/phantasia",
     "type": "project",
+    "description": "A programming language written in PHP",
+    "license": "proprietary",
     "require": {
         "symfony/string": "^7.3",
         "symfony/console": "^7.3",
